@@ -1,14 +1,17 @@
-
+// 栈，存放执行方法的栈
+const effectStack = []
 let activeEffect;
 
 export function effect(fn) {
     const effectFn = ()=>{
         try {
             activeEffect = effectFn;
+            effectStack.push(activeEffect)
             return fn();
         } finally {
             // 执行过后还原
-            activeEffect = undefined
+            effectStack.pop()
+            activeEffect = effectStack[effectStack.length-1]
         }
     }
     return effectFn()

@@ -19,10 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a7c8c0c-8dbf-40d6-b27f-f46b683e9185" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="6a7c8c0c-8dbf-40d6-b27f-f46b683e9185" name="Default Changelist" comment="修改markdown语法">
+      <change afterPath="$PROJECT_DIR$/笔记.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reactive/effect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reactive/effect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reactive/reactive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reactive/reactive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +70,16 @@
       <option name="presentableId" value="Default" />
       <updated>1647408682727</updated>
       <workItem from="1647408683858" duration="7260000" />
-      <workItem from="1647416962083" duration="317000" />
+      <workItem from="1647416962083" duration="3950000" />
     </task>
+    <task id="LOCAL-00001" summary="修改markdown语法">
+      <created>1647417298426</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1647417298426</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,11 +96,19 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改markdown语法" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改markdown语法" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1647410561697">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.9.1920.1080@0.0.1536.824" timestamp="1647410561697" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1647417313234">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.9.1920.1080@0.0.1536.824" timestamp="1647417313234" />
     <state x="573" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1647417044405">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
