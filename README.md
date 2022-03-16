@@ -4,17 +4,5 @@
 仿vue3.0，做一个简易版的mini-vue
 
 #### 软件架构
-软件架构说明
+基于webpack打包工具,www为页面测试主目录，src为主要功能模块
 
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
