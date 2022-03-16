@@ -2,7 +2,7 @@
 const effectStack = []
 let activeEffect;
 
-export function effect(fn) {
+export function effect(fn,options = {}) {
     const effectFn = ()=>{
         try {
             activeEffect = effectFn;
@@ -14,7 +14,12 @@ export function effect(fn) {
             activeEffect = effectStack[effectStack.length-1]
         }
     }
-    return effectFn()
+    if (!options.lazy) {
+        effectFn()
+    }
+    // 调度函数挂载到effectFn上面
+    effectFn.scheduler = options.scheduler
+    return effectFn
 }
 
 const targetMap = new WeakMap()
@@ -43,6 +48,11 @@ export function trigger(target,key) {
     if (!deps) return
 
     deps.forEach(effectFn=>{
-        effectFn()
+        // 如果有调度函数，优先执行调度函数
+        if (effectFn.scheduler) {
+            effectFn.scheduler()
+        } else {
+            effectFn()
+        }
     })
 }

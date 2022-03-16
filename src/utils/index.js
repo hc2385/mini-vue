@@ -9,3 +9,7 @@ export function isChange(oldValue,newValue) {
 export function isArray(target) {
     return Array.isArray(target)
 }
+
+export function isFunction(fn) {
+    return typeof fn === 'function'
+}
