@@ -2,6 +2,7 @@ import {reactive} from "./reactive/reactive";
 import {effect} from "./reactive/effect";
 import {ref} from "./reactive/ref";
 import {computed} from "./reactive/computed";
+import {test} from "./runtime";
 
 var observed = window.observed = reactive({
     count1:0,
@@ -43,12 +44,14 @@ const num = window.num = ref(0)
 //     return num.value * 2
 // })
 
-const c = window.c = computed({
-    set(value) {
-        console.log(`你尝试修改得值为${value}`)
-    },
-    get() {
-        console.log('get')
-        return num.value + 4
-    }
-})
+// const c = window.c = computed({
+//     set(value) {
+//         console.log(`你尝试修改得值为${value}`)
+//     },
+//     get() {
+//         console.log('get')
+//         return num.value + 4
+//     }
+// })
+
+test()

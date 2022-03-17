@@ -19,13 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a7c8c0c-8dbf-40d6-b27f-f46b683e9185" name="Default Changelist" comment="增加ref响应式数据的模块">
-      <change afterPath="$PROJECT_DIR$/src/reactive/computed.js" afterDir="false" />
+    <list default="true" id="6a7c8c0c-8dbf-40d6-b27f-f46b683e9185" name="Default Changelist" comment="提交computed计算模块">
+      <change afterPath="$PROJECT_DIR$/src/runtime/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/runtime/render.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/runtime/vnode.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reactive/effect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reactive/effect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/笔记.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +70,8 @@
       <option name="presentableId" value="Default" />
       <updated>1647408682727</updated>
       <workItem from="1647408683858" duration="7260000" />
-      <workItem from="1647416962083" duration="9597000" />
+      <workItem from="1647416962083" duration="10203000" />
+      <workItem from="1647493867590" duration="5611000" />
     </task>
     <task id="LOCAL-00001" summary="修改markdown语法">
       <created>1647417298426</created>
@@ -93,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647432260537</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="提交computed计算模块">
+      <created>1647437165023</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647437165023</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,22 +117,24 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改markdown语法" />
     <MESSAGE value="完善effect，reactive模块&#10;处理几种极端情况：&#10;  1、reactive嵌套，只有内层有效&#10;  2、只有值发生改变的时候effect才触发trigger&#10;  3、处理数组，不能实时跟踪数组长度的变化&#10;  4、effect的嵌套&#10;  5、如何深层次对象代理" />
     <MESSAGE value="增加ref响应式数据的模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加ref响应式数据的模块" />
+    <MESSAGE value="提交computed计算模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交computed计算模块" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1647410561697">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.9.1920.1080@0.0.1536.824" timestamp="1647410561697" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1647432265341">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1647437169012">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.9.1920.1080@0.0.1536.824" timestamp="1647432265341" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.9.1920.1080@0.0.1536.824" timestamp="1647437169012" />
     <state x="573" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1647417044405">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
