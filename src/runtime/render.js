@@ -29,11 +29,14 @@ function mountElement(vnode,container) {
     mountProps(props,el)
     mountChildren(vnode,el)
     container.appendChild(el)
+    // 挂载之后，保存el
+    vnode.el = el
 }
 
 function mountTextNode(vnode,container){
     const textNode = document.createTextNode(vnode.children)
     container.appendChild(textNode)
+    vnode.el = textNode
 }
 
 function mountFragment(vnode,container){

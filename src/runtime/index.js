@@ -1,5 +1,7 @@
-import { render } from "./render";
+
 import { Text,h,Fragment } from "./vnode";
+// import { render } from "./render";
+import { render } from "./render_bak";
 
 
 const vnode = h(
@@ -24,8 +26,28 @@ const vnode = h(
     ]
 )
 
+render(
+    h('ul',null,[
+        h('li',null,'first'),
+        h(Fragment,null,[]),
+        h('li',null,'last'),
+    ]),
+    document.body
+)
+
+setTimeout(function (){
+    render(
+        h('ul',null,[
+            h('li',null,'first'),
+            h(Fragment,null,[]),
+            h('li',null,'last'),
+            h('li',null,'aaa'),
+        ]),
+        document.body
+    )
+},3000)
+
 
 
 export function test() {
-    render(vnode,document.body)
 }
