@@ -1,5 +1,5 @@
 /**
- *  专门用于处理标签上的各种参数的，例如class和各种attribute
+ *  专门用于处理标签上的各种参数的，例如class和各种attribute，将这些东西加到dom节点上去
  * @param el 该dom元素
  * @param oldProps 以前的标签参数
  * @param newProps 新的标签参数

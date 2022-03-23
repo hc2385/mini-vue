@@ -6,6 +6,13 @@ import {processComponent, processElement, processFragment, processText} from "./
 import {patchProps} from "./patchProps";
 import {mountChildren} from "./mountMethods";
 
+/**
+ * 比较新老虚拟dom，看看后续怎么更新dom
+ * @param n1 老dom
+ * @param n2 新dom
+ * @param container 容器
+ * @param anchor 辅助元素，意思为插入位置的后面一个位置（即在anchor前面一个位置插入元素）
+ */
 export function patch(n1, n2, container, anchor) {
     if (n1 && !isSameVNodeType(n1, n2)) {
         // n1被卸载后，n2将会创建，因此anchor至关重要。需要将它设置为n1的下一个兄弟节点
@@ -26,12 +33,24 @@ export function patch(n1, n2, container, anchor) {
     }
 }
 
+/**
+ * 修补元素，将新的虚拟dom上的元素和孩子节点都修补到旧dom上
+ * @param n1 旧虚拟dom
+ * @param n2 新虚拟dom
+ */
 export function patchElement(n1, n2) {
     n2.el = n1.el;
     patchProps(n2.el, n1.props, n2.props);
     patchChildren(n1, n2, n2.el);
 }
 
+/**
+ * 比较新旧虚拟dom的孩子节点，看看哪些节点需要增加，删除或者修改的
+ * @param n1 旧虚拟dom
+ * @param n2 新虚拟dom
+ * @param container 容器
+ * @param anchor 辅助元素，插入位置的后一个位置
+ */
 export function patchChildren(n1, n2, container, anchor) {
     const { shapeFlag: prevShapeFlag, children: c1 } = n1;
     const { shapeFlag, children: c2 } = n2;
