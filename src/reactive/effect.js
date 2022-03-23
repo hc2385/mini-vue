@@ -2,6 +2,12 @@
 const effectStack = []
 let activeEffect;
 
+/**
+ * 监视器函数，函数中有值发生改变就执行这个函数
+ * @param fn 监视函数
+ * @param options 选项值
+ * @return {effectFn} 返回对fn封装后的监视器函数
+ */
 export function effect(fn,options = {}) {
     const effectFn = ()=>{
         try {
@@ -23,6 +29,12 @@ export function effect(fn,options = {}) {
 }
 
 const targetMap = new WeakMap()
+
+/**
+ * 追踪函数
+ * @param target 追踪的对象
+ * @param key 追踪的key
+ */
 export function track(target,key) {
     if (!activeEffect) {
         return;
@@ -40,6 +52,11 @@ export function track(target,key) {
 
 }
 
+/**
+ * 触发函数
+ * @param target 触发的对象
+ * @param key 触发的key值
+ */
 export function trigger(target,key) {
     const depsMap = targetMap.get(target)
     if (!depsMap) return

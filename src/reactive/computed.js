@@ -1,8 +1,12 @@
 import {effect, track, trigger} from "./effect";
 import {isFunction} from "../utils";
 
+/**
+ * 计算函数
+ * @param getterOrOptions 传递单个函数就是getter，传递{}，那就是getter和setter了
+ * @return {ComputedImpl} 返回计算值的实例对象
+ */
 export function computed(getterOrOptions) {
-
     let getter,setter
 
     if (isFunction(getterOrOptions)) {

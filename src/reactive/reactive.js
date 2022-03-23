@@ -1,7 +1,14 @@
 import {isArray, isChange, isObject} from "../utils";
 import {track, trigger} from "./effect";
 
+// 用于存储代理对象
 const proxyMap = new WeakMap()
+
+/**
+ * 将对象转化为响应式对象
+ * @param target 目标值
+ * @return {*|boolean} 成功就返回Proxy实例对象，否则返回一个Boolean值
+ */
 export function reactive(target) {
     // 不是对象就不进行响应式
     if (!isObject(target)) return target
