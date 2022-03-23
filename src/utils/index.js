@@ -25,3 +25,7 @@ export function isNumber(target) {
 export function isBoolean(target) {
     return typeof target === 'boolean'
 }
+
+export function isSameVNodeType(n1, n2) {
+    return n1.type === n2.type;
+}

@@ -46,7 +46,9 @@ export function h(type,props,children) {
         props,
         children,
         shapeFlag,
-        el: null
+        el: null,
+        // 专门为fragment设定的属性
+        anchor: null
     }
 
 }
