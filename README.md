@@ -12,4 +12,5 @@
 内部采用map的存储方式，存储数据。
 
 #### 渲染函数的说明
-render函数为主要功能的函数，render_simple为第一版简单的实现版本
+render_simple.js为第一版简单的实现版本，render.js为主要功能的函数。
+我将render渲染拆分了3步 总patch（粗略的比对，判断我们要怎么做） --> process（判断要怎么执行） --> 具体的patch，具体的mount 或者 具体的unmount（具体的执行）
