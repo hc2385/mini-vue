@@ -19,12 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a7c8c0c-8dbf-40d6-b27f-f46b683e9185" name="Default Changelist" comment="改进pacth函数的操作：&#10;   1、实现老旧参数比对&#10;   2、修改之前的bug&#10;   3、完成节点的正常插入和删除操作&#10;   4、未完成组件的更新">
+    <list default="true" id="6a7c8c0c-8dbf-40d6-b27f-f46b683e9185" name="Default Changelist" comment="添加一些注释，避免后续遗忘">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/runtime/lib/mountMethods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime/lib/mountMethods.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/runtime/lib/patch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime/lib/patch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/runtime/lib/patchProps.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime/lib/patchProps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/runtime/render.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime/render.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runtime/lib/processMethods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime/lib/processMethods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runtime/lib/unmountMethods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime/lib/unmountMethods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runtime/render_simplify.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime/render_simplify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runtime/vnode.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime/vnode.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +79,7 @@
       <workItem from="1647416962083" duration="10203000" />
       <workItem from="1647493867590" duration="19616000" />
       <workItem from="1647586512871" duration="1562000" />
-      <workItem from="1648019268396" duration="6429000" />
+      <workItem from="1648019268396" duration="9022000" />
     </task>
     <task id="LOCAL-00001" summary="修改markdown语法">
       <created>1647417298426</created>
@@ -127,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648025656558</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="添加一些注释，避免后续遗忘">
+      <created>1648026413862</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1648026413862</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,7 +163,8 @@
     <MESSAGE value="完成虚拟dom节点渲染成真实dom节点的三个内容：&#10;   1、渲染标签元素&#10;   2、渲染text文本&#10;   3、渲染dom片段" />
     <MESSAGE value="完成pacth函数的操作：&#10;   1、目前是删除前面的节点，挂载后续的节点&#10;   2、后续再改进" />
     <MESSAGE value="改进pacth函数的操作：&#10;   1、实现老旧参数比对&#10;   2、修改之前的bug&#10;   3、完成节点的正常插入和删除操作&#10;   4、未完成组件的更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="改进pacth函数的操作：&#10;   1、实现老旧参数比对&#10;   2、修改之前的bug&#10;   3、完成节点的正常插入和删除操作&#10;   4、未完成组件的更新" />
+    <MESSAGE value="添加一些注释，避免后续遗忘" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加一些注释，避免后续遗忘" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1648025349676">
@@ -161,11 +172,11 @@
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.9.1920.1080@0.0.1536.824" timestamp="1647410561697" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1648025349676" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1648025662210">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1648026426829">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.9.1920.1080@0.0.1536.824" timestamp="1647505691229" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1648025662210" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1648026426829" />
     <state x="573" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1647417044405">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

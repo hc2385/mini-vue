@@ -1,5 +1,5 @@
 /**
- *  专门用于处理标签上的各种参数的，例如class和各种attribute，将这些东西加到dom节点上去
+ * 专门用于处理标签上的各种参数的，例如class和各种attribute，将这些东西加到dom节点上去
  * @param el 该dom元素
  * @param oldProps 以前的标签参数
  * @param newProps 新的标签参数
@@ -27,7 +27,19 @@ export function patchProps(el, oldProps, newProps) {
     }
 }
 
+/**
+ * 正则表达式，这些元素的attribute值和property值会出现不同步的情况
+ * @type {RegExp}
+ */
 const domPropsRE = /[A-Z]|^(value|checked|selected|muted|disabled)$/;
+
+/**
+ * 更新dom元素上的属性值
+ * @param el dom元素
+ * @param key 要更新的key
+ * @param prev key对应的以前的value
+ * @param next key对应的之后的value
+ */
 function patchDomProp(el, key, prev, next) {
     switch (key) {
         case 'class':

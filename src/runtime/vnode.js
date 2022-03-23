@@ -15,7 +15,7 @@ export const Fragment = Symbol('Fragment');
 
 
 /**
- *
+ * h函数，返回一个虚拟节点
  * @param {string | Object | Text | Fragment} type
  * @param {Object | null} props
  * @param {string | Number | Array | null} children

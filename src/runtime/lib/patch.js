@@ -1,4 +1,8 @@
-// n1可能为null，n2不可能为null
+/*
+    简单说明：
+        1、该模块主要是比对和更新
+        2、用diff算法更新dom
+ */
 import {isSameVNodeType} from "../../utils";
 import {unmount, unmountChildren} from "./unmountMethods";
 import {ShapeFlags} from "../vnode";
@@ -90,6 +94,13 @@ export function patchChildren(n1, n2, container, anchor) {
     }
 }
 
+/**
+ * 更新没有key值的孩子节点
+ * @param c1 旧的虚拟dom的孩子节点
+ * @param c2 新的虚拟dom的孩子节点
+ * @param container 容器
+ * @param anchor 辅助元素，插入位置的后一个元素
+ */
 export function patchUnkeyedChildren(c1, c2, container, anchor) {
     const oldLength = c1.length;
     const newLength = c2.length;
@@ -104,6 +115,13 @@ export function patchUnkeyedChildren(c1, c2, container, anchor) {
     }
 }
 
+/**
+ * 更新有key值的孩子节点
+ * @param c1 旧的虚拟dom的孩子节点
+ * @param c2 新的虚拟dom的孩子节点
+ * @param container 容器
+ * @param anchor 辅助元素，插入位置的后一个元素
+ */
 export function patchKeyedChildren(c1, c2, container, anchor) {
     let i = 0,
         e1 = c1.length - 1,
@@ -202,6 +220,11 @@ export function patchKeyedChildren(c1, c2, container, anchor) {
     }
 }
 
+/**
+ * 最长上升子序列算法，得到的数组对象
+ * @param nums 数值
+ * @return {[]} 返回需要移动的位数
+ */
 export function getSequence(nums) {
     const result = [];
     const position = [];

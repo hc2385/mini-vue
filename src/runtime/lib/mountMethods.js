@@ -1,5 +1,7 @@
-// 都是一些挂载函数
-
+/*
+    简单说明：
+        1、该模块主要是将虚拟dom节点挂载到容器中
+ */
 import {ShapeFlags} from "../vnode";
 import {patchProps} from "./patchProps";
 import {patch} from "./patch";

@@ -1,8 +1,13 @@
+/*
+    简单说明：
+        1、这个是第一个版本的渲染函数，是一个简化版本的
+        2、功能只有渲染，没有比对，更新和diff比较
+ */
 import {ShapeFlags} from "./vnode";
 import {isBoolean} from "../utils";
 
 /**
- * 将vnode挂载到container容器中
+ * 渲染vnode到容器container中
  * @param vnode 虚拟dom节点
  * @param container 容器
  */
@@ -10,6 +15,11 @@ export function render_simplify(vnode, container) {
     mount(vnode,container)
 }
 
+/**
+ * 将vnode按不同的情况挂载到container中
+ * @param vnode 虚拟dom节点
+ * @param container 容器
+ */
 function mount(vnode,container) {
     const { shapeFlag } = vnode
     if (shapeFlag & ShapeFlags.ELEMENT) {
@@ -23,6 +33,11 @@ function mount(vnode,container) {
     }
 }
 
+/**
+ * 挂载元素类型的vnode到container中
+ * @param vnode 虚拟dom节点
+ * @param container 容器
+ */
 function mountElement(vnode,container) {
     const { type,props,children } = vnode
     const el = document.createElement(type)
@@ -33,20 +48,40 @@ function mountElement(vnode,container) {
     vnode.el = el
 }
 
+/**
+ * 挂载文本类型的vnode到container中
+ * @param vnode 虚拟dom节点
+ * @param container 容器
+ */
 function mountTextNode(vnode,container){
     const textNode = document.createTextNode(vnode.children)
     container.appendChild(textNode)
     vnode.el = textNode
 }
 
+/**
+ * 挂载片段类型的vnode到container中
+ * @param vnode 虚拟dom节点
+ * @param container 容器
+ */
 function mountFragment(vnode,container){
     mountChildren(vnode,container)
 }
 
+/**
+ * 挂载组件类型的vnode到container中
+ * @param vnode 虚拟dom节点
+ * @param container 容器
+ */
 function mountComponent(vnode,container){
 
 }
 
+/**
+ * 挂载孩子类型的vnode到container中
+ * @param vnode 虚拟dom节点
+ * @param container 容器
+ */
 function mountChildren(vnode,container) {
     const { shapeFlag,children } = vnode
     if (shapeFlag & ShapeFlags.TEXT_CHILDREN) {
@@ -61,6 +96,11 @@ function mountChildren(vnode,container) {
 // html某些属性不能使用setAttribute来，必须要用dom节点设置才能生效
 const domPropsRE = /[A-Z]|^(value|checked|selected|muted|disabled)/
 
+/**
+ * 挂载属性到元素上
+ * @param props 属性对象
+ * @param el 要挂载的节点
+ */
 function mountProps(props,el) {
     for (const key in props) {
         let value = props[key]
