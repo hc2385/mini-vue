@@ -2,6 +2,6 @@
 // import vnodeAndDiff from "./examples/vnodeAndDiff";
 
 // 测试组件
-import mountComponent from "./examples/mountComponent";
+// import mountComponent from "./examples/mountComponent";
 
-// import updateComponentView from "./examples/updateComponentView";
+import updateComponentView from "./examples/updateComponentView";

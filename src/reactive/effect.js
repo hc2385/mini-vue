@@ -67,7 +67,8 @@ export function trigger(target,key) {
     deps.forEach(effectFn=>{
         // 如果有调度函数，优先执行调度函数
         if (effectFn.scheduler) {
-            effectFn.scheduler()
+            // 调度函数需要得到这个effectFn这个函数
+            effectFn.scheduler(effectFn)
         } else {
             effectFn()
         }

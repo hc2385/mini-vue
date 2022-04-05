@@ -2,6 +2,7 @@ import {reactive} from "../../reactive/reactive";
 import {effect} from "../../reactive/effect";
 import {normalizeVNode} from "../vnode";
 import { patch } from "./patch";
+import {getAllJobs} from "./schedule";
 
 
 
@@ -48,6 +49,8 @@ export function mountComponent(vnode, container, anchor) {
         const {preSubTree,subTree} = getPreNextSubTree(Component,instance)
         patch(preSubTree,subTree,container,anchor)
         vnode.el = subTree.el
+    },{
+        scheduler:getAllJobs
     })
 
     instance.update()

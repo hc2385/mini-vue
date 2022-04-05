@@ -7,15 +7,20 @@ import {render} from "../runtime/render";
 const component = {
     setup() {
         const count = ref(0)
+        const abc = ref(1)
         const add = ()=>{
             count.value++
+            count.value++
+            count.value++
+            abc.value++
         }
-        return {count,add}
+        return {count,abc,add}
     },
     render(ctx) {
+        console.log('render')
         return [
-            h('div', null, ctx.count.value),
-            h('button',{onClick:ctx.add},'add')
+            h('div', null, ctx.count.value + ' ' + ctx.abc.value),
+            h('button',{onClick:ctx.add},'add1')
         ]
     }
 }
