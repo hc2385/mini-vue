@@ -4,7 +4,16 @@
 仿vue3.0，做一个简易版的mini-vue
 
 #### 软件架构
-基于webpack打包工具,www为页面测试主目录，src为主要功能模块
+基于webpack打包工具,www为测试页面主目录，src为主要功能模块
+
+#### 实现的功能
+1、响应式数据ref，reactive
+2、监视函数 effect，计算函数computed
+3、简化版的渲染函数render_simple.js
+4、完成对这几种类型（数组，元素，组件，fragment，字符串/数字）的虚拟dom的渲染（render.js函数）
+5、完成patch函数（新旧dom的比较），内部实现了diff算法，完善了渲染功能
+6、组件可以传props（props目前只能传递数组类型）
+
 
 #### 响应式数据说明
 在reactive这个文件夹内部封装了ref，reactive，effect三个主要的响应式操作，computed是借助effect来实现的，reactive是借助proxy实现的
