@@ -14,6 +14,8 @@
 4、完成对这几种类型（数组，元素，组件，fragment，字符串/数字）的虚拟dom的渲染（render.js函数）
 5、完成patch函数（新旧dom的比较），内部实现了diff算法，完善了渲染功能
 6、组件可以传props（props目前只能传递数组类型）
+7、实现组件的调度函数getAllJobs，解决effect每次都要监视的问题。（schedule.js）
+8、实现nextTick（用的Promise实现的），在每个函数内部数据更新到dom之后进行的操作（schedule.js）
 ```
 
 
@@ -43,4 +45,11 @@ render_simple.js为第一版简单的实现版本，render.js为主要功能的�
 1、组件props只能传递数组类型
 2、目前组件更新的操作并没有去判断组件是否需要更新，而是遇到更新直接就更新
 3、内部采用effect去追踪组件数据的变化，从而更新视图
+4、重写调度函数getAllJobs，解决effect每次都要默认进行监视的问题。
+```
+
+#### nextTick
+```
+1、内部实现用的是Promise
+2、原理就是该组件对应的effect方法执行之后，页面肯定是更新了，调用Promise.then方法去执行回调函数。
 ```
