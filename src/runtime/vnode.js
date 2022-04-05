@@ -1,5 +1,9 @@
-import {isArray, isNumber, isString} from "../utils";
+import {isArray, isNumber, isObject, isString} from "../utils";
 
+/**
+ * 用一个数字可以表示多种类型（利用位运算）
+ * @type {{ELEMENT: number, FRAGMENT: number, TEXT: number, COMPONENT: number, TEXT_CHILDREN: number, ARRAY_CHILDREN: number, CHILDREN: number}}
+ */
 export const ShapeFlags = {
     ELEMENT:1,             // 00000001
     TEXT:1 << 1,           // 00000010
@@ -48,7 +52,20 @@ export function h(type,props,children) {
         shapeFlag,
         el: null,
         // 专门为fragment设定的属性
-        anchor: null
+        anchor: null,
+        key: props && (props.key != null ? props.key : null),
+        // 准们用于存储组件的实例对象
+        component: null,
     }
+}
 
+/**
+ * 规范化Vnode的形式，避免出现只有Array，String，Number这样的类型数据
+ * @param target 传递的目标值，{ 'abc' | 123 | [h(),h()] | h() }
+ * @return {*|VNode} 返回一个规范形式的VNode
+ */
+export function normalizeVNode(target) {
+    if(isArray(target)) return h(Fragment,null,target)
+    else if (isObject(target)) return target
+    else return h(Text,null,target.toString())
 }

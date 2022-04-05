@@ -2,9 +2,11 @@
     简单说明：
         1、该模块主要是将虚拟dom节点挂载到容器中
  */
-import {ShapeFlags} from "../vnode";
+import {normalizeVNode, ShapeFlags} from "../vnode";
 import {patchProps} from "./patchProps";
 import {patch} from "./patch";
+import {reactive} from "../../reactive/reactive";
+import {mountComponent} from  './component'
 
 /**
  * 挂载元素到容器内
@@ -57,19 +59,13 @@ export function mountChildren(children, container, anchor) {
 }
 
 /**
- * 挂载组件，后续完成，还没做
+ * 挂载组件实例对象
+ * @param newNode
+ * @param container
+ * @param anchor
  */
-export function mountComponent(newNode, container, anchor, patch) {
-
+export function mountComp(newNode, container, anchor) {
+    mountComponent(newNode, container, anchor)
 }
 
-/**
- * 更新组件
- * @param n1 老的虚拟dom
- * @param n2 新的虚拟dom
- */
-function updateComponent(n1, n2) {
-    n2.component = n1.component;
-    n2.component.next = n2;
-    n2.component.update();
-}
+

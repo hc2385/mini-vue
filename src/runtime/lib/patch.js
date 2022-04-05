@@ -123,9 +123,9 @@ export function patchUnkeyedChildren(c1, c2, container, anchor) {
  * @param anchor 辅助元素，插入位置的后一个元素
  */
 export function patchKeyedChildren(c1, c2, container, anchor) {
-    let i = 0,
-        e1 = c1.length - 1,
-        e2 = c2.length - 1;
+    let i = 0
+    let e1 = c1.length - 1
+    let e2 = c2.length - 1;
     // 1.从左至右依次比对
     // key的判断可能要换成isSameVNodetype
     while (i <= e1 && i <= e2 && c1[i].key === c2[i].key) {
@@ -222,6 +222,7 @@ export function patchKeyedChildren(c1, c2, container, anchor) {
 
 /**
  * 最长上升子序列算法，得到的数组对象
+ * 例如下标为[2,3,4,1,2]   -->  就会得到 [0,2],也就是2，3，4
  * @param nums 数值
  * @return {[]} 返回需要移动的位数
  */

@@ -19,9 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a7c8c0c-8dbf-40d6-b27f-f46b683e9185" name="Default Changelist" comment="修改README.md文档">
+    <list default="true" id="6a7c8c0c-8dbf-40d6-b27f-f46b683e9185" name="Default Changelist" comment="增加一些注释">
+      <change afterPath="$PROJECT_DIR$/src/examples/mountComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/examples/updateComponentView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/runtime/lib/component.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runtime/lib/mountMethods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime/lib/mountMethods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runtime/lib/patch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime/lib/patch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runtime/lib/processMethods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime/lib/processMethods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runtime/vnode.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime/vnode.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +80,13 @@
       <workItem from="1647416962083" duration="10203000" />
       <workItem from="1647493867590" duration="19616000" />
       <workItem from="1647586512871" duration="1562000" />
-      <workItem from="1648019268396" duration="9757000" />
+      <workItem from="1648019268396" duration="11708000" />
+      <workItem from="1648118047752" duration="314000" />
+      <workItem from="1648188857485" duration="6290000" />
+      <workItem from="1648273932630" duration="803000" />
+      <workItem from="1648364353059" duration="1612000" />
+      <workItem from="1648557998503" duration="1093000" />
+      <workItem from="1649136486404" duration="11150000" />
     </task>
     <task id="LOCAL-00001" summary="修改markdown语法">
       <created>1647417298426</created>
@@ -145,7 +158,21 @@
       <option name="project" value="LOCAL" />
       <updated>1648034435793</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="修改README.md文档">
+      <created>1648034678171</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1648034678171</updated>
+    </task>
+    <task id="LOCAL-00012" summary="增加一些注释">
+      <created>1648035426175</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1648035426175</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +200,8 @@
     <MESSAGE value="改进pacth函数的操作：&#10;   1、实现老旧参数比对&#10;   2、修改之前的bug&#10;   3、完成节点的正常插入和删除操作&#10;   4、未完成组件的更新" />
     <MESSAGE value="添加一些注释，避免后续遗忘" />
     <MESSAGE value="修改README.md文档" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改README.md文档" />
+    <MESSAGE value="增加一些注释" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加一些注释" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1648025349676">
@@ -181,11 +209,11 @@
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.9.1920.1080@0.0.1536.824" timestamp="1647410561697" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1648025349676" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1648034438738">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1648035430538">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.9.1920.1080@0.0.1536.824" timestamp="1647505691229" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1648034438738" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1648035430538" />
     <state x="573" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1647417044405">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

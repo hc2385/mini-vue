@@ -3,8 +3,9 @@
         1、该模块主要是判断如何用什么方式更新到dom上
         2、其实主要流程是  大概的patch --> process判断 --> 具体的patch 或者是 mount
  */
-import {mountChildren, mountComponent, mountElement, mountTextNode} from "./mountMethods";
+import {mountChildren, mountElement, mountTextNode} from "./mountMethods";
 import {patchChildren, patchElement} from "./patch";
+import {updateComponent,mountComponent} from "./component";
 
 /**
  * 判断元素类型的虚拟dom 怎么转换到真实dom上
@@ -69,8 +70,9 @@ export function processText(n1, n2, container, anchor) {
  */
 export function processComponent(n1, n2, container, anchor) {
     if (n1 == null) {
-        mountComponent(n2, container, anchor, patch);
+        mountComponent(n2, container, anchor);
     } else {
-        // updateComponent(n1, n2);
+        // 更新组件
+        updateComponent(n1, n2);
     }
 }
