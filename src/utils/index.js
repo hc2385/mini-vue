@@ -36,7 +36,6 @@ export function removeMark(str) {
     return res
 }
 
-//   id="foo" class="abc cba" v-if="ok"
 export function getTagArr(str) {
     let arr = []
     let mystr = ''

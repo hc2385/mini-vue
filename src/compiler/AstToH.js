@@ -28,7 +28,8 @@ function getElementNode(obj) {
     let { tag,props } = obj
     let myProps = {}
     props.forEach(item=>{
-        myProps[item.name] = item.content
+        // console.log(item.name,item.value.content)
+        myProps[item.name] = item.value.content
     })
     return h(tag,myProps,getChildren(obj.children))
 }

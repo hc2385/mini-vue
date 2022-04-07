@@ -19,10 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a7c8c0c-8dbf-40d6-b27f-f46b683e9185" name="Default Changelist" comment="实现了将字符串转化为AST树">
-      <change afterPath="$PROJECT_DIR$/src/compiler/AstToH.js" afterDir="false" />
+    <list default="true" id="6a7c8c0c-8dbf-40d6-b27f-f46b683e9185" name="Default Changelist" comment="简单的实现了将AST树转化为vNode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compiler/AstToH.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compiler/AstToH.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compiler/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compiler/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +85,7 @@
       <workItem from="1648557998503" duration="1093000" />
       <workItem from="1649136486404" duration="17871000" />
       <workItem from="1649224910409" duration="10438000" />
-      <workItem from="1649306644135" duration="13081000" />
+      <workItem from="1649306644135" duration="15810000" />
     </task>
     <task id="LOCAL-00001" summary="修改markdown语法">
       <created>1647417298426</created>
@@ -238,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649317179310</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="简单的实现了将AST树转化为vNode">
+      <created>1649325288818</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1649325288818</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +285,8 @@
     <MESSAGE value="添加createApp函数，内部简单实现了mount" />
     <MESSAGE value="1、实现了parseToToken方法获得token数组&#10;2、创建了从字符串转化为父子关系的数组" />
     <MESSAGE value="实现了将字符串转化为AST树" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现了将字符串转化为AST树" />
+    <MESSAGE value="简单的实现了将AST树转化为vNode" />
+    <option name="LAST_COMMIT_MESSAGE" value="简单的实现了将AST树转化为vNode" />
   </component>
   <component name="WindowStateProjectService">
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1648025349676">

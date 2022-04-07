@@ -8,16 +8,17 @@
 
 #### 实现的功能
 ```
-一、runtime中实现的功能
+一、响应式数据的实现
     1、响应式数据ref，reactive
     2、监视函数 effect，计算函数computed
+二、runtime功能的实现
     3、简化版的渲染函数render_simple.js
-    4、完成对这几种类型（数组，元素，组件，fragment，字符串/数字）的虚拟dom的渲染（render.js函数）
+    4、完成对这几种类型（数组，元素，组件，fragment，字符串/数字）的虚拟dom的渲染（render.js）
     5、完成patch函数（新旧dom的比较），内部实现了diff算法，完善了渲染功能
     6、组件可以传props（props目前只能传递数组类型）
     7、实现组件的调度函数getAllJobs，解决effect每次都要监视的问题。（schedule.js）
     8、实现nextTick（用的Promise实现的），在每个函数内部数据更新到dom之后进行的操作（schedule.js）
-二、compiler中实现的功能
+三、compiler功能的实现
     1、将dom字符串转化为AST语法树（字符串 --> token数组 --> token数组转化为语法树） 
 ```
 
