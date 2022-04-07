@@ -9,7 +9,9 @@
 // 测试模板语法树
 import {AstTree} from "./compiler/AstTree"
 
-let str = "<div id='12'>大大撒旦</div>"
+let str = `<div id="foo" class="abc cba" v-if="ok">
+    <span>hello {{name}}</span>
+</div>`
 
 let ast = new AstTree(str)
 
