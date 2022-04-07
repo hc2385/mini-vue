@@ -8,6 +8,7 @@
 
 // 测试模板语法树
 import {AstTree} from "./compiler/AstTree"
+import {astToH} from "./compiler/AstToH";
 
 let str = `<div id="foo" class="abc cba" v-if="ok">
     <span>hello {{name}}</span>
@@ -15,4 +16,4 @@ let str = `<div id="foo" class="abc cba" v-if="ok">
 
 let ast = new AstTree(str)
 
-console.log(ast.getAstTree())
+console.log(astToH(ast.getAstTree()))
