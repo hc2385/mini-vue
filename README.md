@@ -8,17 +8,18 @@
 
 #### 实现的功能
 ```
-1、响应式数据ref，reactive
-2、监视函数 effect，计算函数computed
-3、简化版的渲染函数render_simple.js
-4、完成对这几种类型（数组，元素，组件，fragment，字符串/数字）的虚拟dom的渲染（render.js函数）
-5、完成patch函数（新旧dom的比较），内部实现了diff算法，完善了渲染功能
-6、组件可以传props（props目前只能传递数组类型）
-7、实现组件的调度函数getAllJobs，解决effect每次都要监视的问题。（schedule.js）
-8、实现nextTick（用的Promise实现的），在每个函数内部数据更新到dom之后进行的操作（schedule.js）
+一、runtime中实现的功能
+    1、响应式数据ref，reactive
+    2、监视函数 effect，计算函数computed
+    3、简化版的渲染函数render_simple.js
+    4、完成对这几种类型（数组，元素，组件，fragment，字符串/数字）的虚拟dom的渲染（render.js函数）
+    5、完成patch函数（新旧dom的比较），内部实现了diff算法，完善了渲染功能
+    6、组件可以传props（props目前只能传递数组类型）
+    7、实现组件的调度函数getAllJobs，解决effect每次都要监视的问题。（schedule.js）
+    8、实现nextTick（用的Promise实现的），在每个函数内部数据更新到dom之后进行的操作（schedule.js）
+二、compiler中实现的功能
+    1、将dom字符串转化为AST语法树（字符串 --> token数组 --> token数组转化为语法树） 
 ```
-
-
 
 
 #### 响应式数据说明
@@ -52,4 +53,21 @@ render_simple.js为第一版简单的实现版本，render.js为主要功能的�
 ```
 1、内部实现用的是Promise
 2、原理就是该组件对应的effect方法执行之后，页面肯定是更新了，调用Promise.then方法去执行回调函数。
+```
+
+#### AST语法树的说明
+```
+1、AST语法树分为了7种，具体请看《AST数据类型.md》文件
+2、实现AST的流程为，dom字符串-->token数组-->AST语法树
+3、token实现思路：
+    （1）、将html字符串从前往后扫描。包含一下三种内容
+    （2）、将"<" 和">" 包裹的内容被认为是标签内容（可能包含属性，指令）
+    （3）、将">" 和"<" 包裹的内容被认为是文本内容（可能包含文本，插值语法）
+    （4）、将"</" 和"<" 包裹的内容被认为是结束内容
+    （5）、返回一个一维的数组
+4、AST语法树实现思路：
+    （1）、循环token数组
+    （2）、定义一个栈，用于保存上一次存储的父亲对象，定义一个collect，指向当前操作的孩子
+    （3）、当遇到结束符号的时候，就出栈，更新collect为父亲的孩子
+    （4）、若没遇到结束符号的时候，collect指向当前对象的孩子
 ```
