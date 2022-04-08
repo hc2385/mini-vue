@@ -6,7 +6,12 @@ import {render} from "../runtime/render";
 export function astToH(ast) {
     // 将这个对象转化为h函数
     let res = getChildren(ast.children)
-    render(h(Fragment,null,res),document.body)
+
+    return `
+        const {h,Text,Fragment} = MiniVue
+        console.log(ctx)
+        return [${res}]
+    `
 }
 
 function getChildren(children) {
@@ -28,13 +33,13 @@ function getElementNode(obj) {
     let { tag,props } = obj
     let myProps = {}
     props.forEach(item=>{
-        // console.log(item.name,item.value.content)
         myProps[item.name] = item.value.content
     })
-    return h(tag,myProps,getChildren(obj.children))
+    myProps = JSON.stringify(myProps)
+    return `h("${tag}",${myProps},[${getChildren(obj.children)}])`
 }
 
 // 注意里面包含插值语法和值
 function getTextNode(obj) {
-    return h(Text,null,obj.content)
+    return `h(Text,null,"${obj.content}")`
 }

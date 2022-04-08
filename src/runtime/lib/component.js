@@ -3,6 +3,8 @@ import {effect} from "../../reactive/effect";
 import {normalizeVNode} from "../vnode";
 import { patch } from "./patch";
 import {getAllJobs} from "./schedule";
+import {AstTree} from "../../compiler/AstTree";
+import {astToH} from "../../compiler/AstToH";
 
 
 
@@ -124,7 +126,16 @@ function updateInstance(instance,vnode) {
  */
 function getPreNextSubTree(component,instance) {
     let preSubTree = instance.subTree
-    let res = component.render(instance.ctx)
+    let res
+    if (component.template) {
+        let ast = new AstTree(component.template)
+        let astTree = ast.getAstTree()
+        let strH = astToH(astTree)
+        let fn = new Function('ctx',strH)
+        res = fn()
+    } else {
+        res = component.render(instance.ctx)
+    }
     // 格式化渲染得到的结果
     const subTree = normalizeVNode(res)
     // 保存subTree的结果

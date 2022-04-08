@@ -20,12 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a7c8c0c-8dbf-40d6-b27f-f46b683e9185" name="Default Changelist" comment="简单的实现了将AST树转化为vNode">
+      <change afterPath="$PROJECT_DIR$/src/common/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/examples/testAstTree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/examples/testCreateApp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/compiler/AstToH.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compiler/AstToH.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compiler/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compiler/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/vnodeAndDiff.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/vnodeAndDiff.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runtime/lib/component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime/lib/component.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +87,8 @@
       <workItem from="1648557998503" duration="1093000" />
       <workItem from="1649136486404" duration="17871000" />
       <workItem from="1649224910409" duration="10438000" />
-      <workItem from="1649306644135" duration="15810000" />
+      <workItem from="1649306644135" duration="20154000" />
+      <workItem from="1649401197954" duration="6626000" />
     </task>
     <task id="LOCAL-00001" summary="修改markdown语法">
       <created>1647417298426</created>
@@ -248,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649325288818</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="简单的实现了将AST树转化为vNode">
+      <created>1649330634085</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1649330634085</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,11 +304,11 @@
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.9.1920.1080@0.0.1536.824" timestamp="1647410561697" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1648025349676" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1649317185959">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1649330637290">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.9.1920.1080@0.0.1536.824" timestamp="1647505691229" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1649317185959" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1649330637290" />
     <state x="573" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1647417044405">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
