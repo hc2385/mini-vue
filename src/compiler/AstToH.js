@@ -2,15 +2,17 @@
 import {Fragment, h, ShapeFlags, Text} from "../runtime/vnode";
 import {NodeTypes} from "./rules";
 import {render} from "../runtime/render";
+import {capitalize, removeMark} from "../utils";
 
 export function astToH(ast) {
     // 将这个对象转化为h函数
     let res = getChildren(ast.children)
-
+    console.log(res)
     return `
-        const {h,Text,Fragment} = MiniVue
-        console.log(ctx)
-        return [${res}]
+        with(ctx) {
+            const {h,Text,Fragment} = MiniVue
+            return [${res}]
+        }
     `
 }
 
@@ -23,7 +25,8 @@ function getChildren(children) {
         } else if (type === NodeTypes.TEXT) {
             arr.push(getTextNode(child))
         } else if (type === NodeTypes.INTERPOLATION) {
-            // 解析指令
+            // 解析插值
+            arr.push(getInterpolation(child))
         }
     })
     return arr.length?arr:null
@@ -31,15 +34,35 @@ function getChildren(children) {
 
 function getElementNode(obj) {
     let { tag,props } = obj
-    let myProps = {}
-    props.forEach(item=>{
-        myProps[item.name] = item.value.content
-    })
-    myProps = JSON.stringify(myProps)
+    let myProps = processProps(props)
     return `h("${tag}",${myProps},[${getChildren(obj.children)}])`
+}
+
+
+function processProps(props) {
+    let str = ''
+    let val = ''
+    props.forEach(item=>{
+        // 处理点击事件
+        if (item.name.startsWith('@')) {
+            let eventName = 'on' + capitalize(item.name.substr(1))
+            let event = item.value.content
+            val = `,${eventName}:${event}`
+        } else {
+            val = `,"${item.name}":"${item.value.content}"`
+            // myProps[item.name] = item.value.content
+        }
+        str+=val
+    })
+    if (str.length) str = str.substr(1)
+    return `{${str}}`
 }
 
 // 注意里面包含插值语法和值
 function getTextNode(obj) {
     return `h(Text,null,"${obj.content}")`
+}
+
+function getInterpolation(obj) {
+    return `h(Text,null,${obj.content.content})`
 }

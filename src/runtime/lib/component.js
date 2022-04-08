@@ -132,7 +132,7 @@ function getPreNextSubTree(component,instance) {
         let astTree = ast.getAstTree()
         let strH = astToH(astTree)
         let fn = new Function('ctx',strH)
-        res = fn()
+        res = fn(instance.ctx)
     } else {
         res = component.render(instance.ctx)
     }
